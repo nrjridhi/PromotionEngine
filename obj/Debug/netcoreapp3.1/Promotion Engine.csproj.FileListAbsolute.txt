@@ -1,0 +1,13 @@
+E:\Promotion Engine\bin\Debug\netcoreapp3.1\Promotion Engine.exe
+E:\Promotion Engine\bin\Debug\netcoreapp3.1\Promotion Engine.deps.json
+E:\Promotion Engine\bin\Debug\netcoreapp3.1\Promotion Engine.runtimeconfig.json
+E:\Promotion Engine\bin\Debug\netcoreapp3.1\Promotion Engine.runtimeconfig.dev.json
+E:\Promotion Engine\bin\Debug\netcoreapp3.1\Promotion Engine.dll
+E:\Promotion Engine\bin\Debug\netcoreapp3.1\Promotion Engine.pdb
+E:\Promotion Engine\obj\Debug\netcoreapp3.1\Promotion Engine.csprojAssemblyReference.cache
+E:\Promotion Engine\obj\Debug\netcoreapp3.1\Promotion Engine.AssemblyInfoInputs.cache
+E:\Promotion Engine\obj\Debug\netcoreapp3.1\Promotion Engine.AssemblyInfo.cs
+E:\Promotion Engine\obj\Debug\netcoreapp3.1\Promotion Engine.csproj.CoreCompileInputs.cache
+E:\Promotion Engine\obj\Debug\netcoreapp3.1\Promotion Engine.dll
+E:\Promotion Engine\obj\Debug\netcoreapp3.1\Promotion Engine.pdb
+E:\Promotion Engine\obj\Debug\netcoreapp3.1\Promotion Engine.genruntimeconfig.cache
