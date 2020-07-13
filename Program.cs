@@ -38,7 +38,7 @@ namespace Promotion_Engine
             int CounterofD = 0;
             int priceofD = 15;
             int CounterofCD = 0;
-            int priceofCD = 35;
+            int priceofCD = 30;
             foreach (Product pr in products)
             {
                 if (pr.Id == "A" || pr.Id == "a")
@@ -60,8 +60,13 @@ namespace Promotion_Engine
             }
             if (CounterofC > 0 && CounterofD > 0)
             {
+                // if(CounterofC>CounterofD){
+                // int CountofCExtra=CounterofC-CounterofD;
+                // int priceOfCDDis=CountofCExtra*priceofC;
+                // }
                 CounterofCD = CounterofC + CounterofD;
             }
+
             int totalPriceofA = (counterofA / 3) * 130 + (counterofA % 3 * priceofA);
             int totalPriceofB = (counterofB / 2) * 45 + (counterofB % 2 * priceofB);
             int totalPriceofC = 0;
@@ -69,7 +74,18 @@ namespace Promotion_Engine
             int totalPriceOfCD = 0;
             if (CounterofCD > 0)
             {
-                totalPriceOfCD = (CounterofCD / 2) * 30 + (CounterofCD % 2 * priceofCD);
+                if (CounterofC > CounterofD)
+                {
+                    totalPriceOfCD = (CounterofCD / 2) * 30 + (CounterofCD % 2 * priceofC);
+                }
+                else if (CounterofD > CounterofC)
+                {
+                    totalPriceOfCD = (CounterofCD / 2) * 30 + (CounterofCD % 2 * priceofD);
+                }
+                else
+                {
+                    totalPriceOfCD = (CounterofCD / 2) * 30 + (CounterofCD % 2 * priceofCD);
+                }
             }
             else
             {
