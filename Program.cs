@@ -15,19 +15,19 @@ namespace Promotion_Engine
 
             Console.WriteLine("total number of order");
             int a = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < a; i++)
+            for (int i = 0; i <= a - 1; i++)
             {
                 Console.WriteLine("enter  type of product:A,B,C or D");
                 string type = Console.ReadLine();
                 Product p = new Product(type);
                 products.Add(p);
             }
-            int totalPrice = GetTotalPrice(products);
+            int totalPrice = TotalOrderValue(products);
             Console.WriteLine(totalPrice);
             Console.ReadLine();
         }
 
-        private static int GetTotalPrice(List<Product> products)
+        private static int TotalOrderValue(List<Product> products)
         {
             int counterofA = 0;
             int priceofA = 50;
@@ -37,6 +37,8 @@ namespace Promotion_Engine
             int priceofC = 20;
             int CounterofD = 0;
             int priceofD = 15;
+            int CounterofCD = 0;
+            int priceofCD = 35;
             foreach (Product pr in products)
             {
                 if (pr.Id == "A" || pr.Id == "a")
@@ -56,11 +58,25 @@ namespace Promotion_Engine
                     CounterofD = CounterofD + 1;
                 }
             }
+            if (CounterofC > 0 && CounterofD > 0)
+            {
+                CounterofCD = CounterofC + CounterofD;
+            }
             int totalPriceofA = (counterofA / 3) * 130 + (counterofA % 3 * priceofA);
             int totalPriceofB = (counterofB / 2) * 45 + (counterofB % 2 * priceofB);
-            int totalPriceofC = (CounterofC * priceofC);
-            int totalPriceofD = (CounterofD * priceofD);
-            return totalPriceofA + totalPriceofB + totalPriceofC + totalPriceofD;
+            int totalPriceofC = 0;
+            int totalPriceofD = 0;
+            int totalPriceOfCD = 0;
+            if (CounterofCD > 0)
+            {
+                totalPriceOfCD = (CounterofCD / 2) * 30 + (CounterofCD % 2 * priceofCD);
+            }
+            else
+            {
+                totalPriceofC = (CounterofC * priceofC);
+                totalPriceofD = (CounterofD * priceofD);
+            }
+            return totalPriceofA + totalPriceofB + totalPriceofC + totalPriceofD + totalPriceOfCD;
 
         }
 
